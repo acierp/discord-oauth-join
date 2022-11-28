@@ -38,5 +38,6 @@ def add_to_guild(access_token, user_id , guild_id):
           return add_to_guild(access_token, user_id, guild_id)
         print(response.text)
 
+gid = input("guild id: ")
 for user in open('codes.txt', 'r').read().splitlines():
-  add_to_guild(access_token=user.split(':')[1], userID=user.split(':')[0],guild_Id="1034897497698598923")
+  add_to_guild(access_token=user.split(':')[1], user_id=user.split(':')[0],guild_id=gid)
