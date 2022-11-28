@@ -5,9 +5,10 @@ import time
 from discord import *
 from discord.ext import commands
 
-CLIENT_ID = '1032041484045787146'
-CLIENT_SECRET = 'DXqIdk3jHkn0uvYfV0W4PlMHK1ndS_5C'
-REDIRECT_URI = 'https://discord.com/api/oauth2/authorize?client_id=1032041484045787146&redirect_uri=http%3A%2F%2F209.126.82.205%3A5000%2Fauthenticate&response_type=code&scope=identify%20guilds.join' 
+client_id = config['client_id']
+client_secret = config['client_secret']
+redirect_uri = config['redirect_uri']
+token = config['bot_token']
 
 def exchange_code(code):
   data = {
@@ -27,7 +28,7 @@ def add_to_guild(access_token, user_id , guild_id):
         "access_token" : access_token,
     }
         headers = {
-        "Authorization" : f"Bot {botToken}",
+        "Authorization" : f"Bot {token}",
         'Content-Type': 'application/json'
 
     }
