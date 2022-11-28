@@ -1,1 +1,1 @@
-### How it works
+## How it works
